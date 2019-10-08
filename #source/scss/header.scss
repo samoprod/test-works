@@ -1,0 +1,144 @@
+//====================================================================================================
+.header-wrap{
+	@include flexbox();
+	justify-content:center;align-items: center;
+	height: 100%;
+	height: 100vh;
+}
+
+.header-body{
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding: 5px;
+	h1{
+		display: inline-block;
+		font-size: 32px;
+		font-weight: 900;
+		color: #ffffff;
+		text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	}
+	p{
+		font-size: 16px;
+		text-align: center;
+		margin-top: 15px;
+		color: #fff;
+	}
+}
+
+header{
+	background-color: #454545;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: 0;
+	&:before{
+		content:' ';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		background-color: rgba(0,0,0,.2);
+		z-index: -1;
+	}
+}
+
+.header-blur{
+	position: absolute;
+	bottom: -100px;
+	width: 110%;
+	margin-left: -5%;
+	height: 200px;
+	background-color: #f1f1f1;
+	filter: blur(30px);
+	z-index: 9;
+}
+
+
+.images{
+	position: relatie;
+	height: 110%;
+	top: -10%;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+	.image-wrapper{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+
+.header-content{
+	position: absolute;
+	height: 100%;
+	min-height: 500px;
+	width: 100%;
+	left: 0;
+	top: 100%;
+	font-size: 18px;
+	background-color: #f1f1f1;
+	padding: 150px 0;
+	@include flexbox();
+	justify-content:center;align-items: center;
+	flex-direction: column;
+	.copyright{
+		position: absolute;
+		bottom: 30px;
+		display: block;
+		font-size: 14px;
+		color: #000;
+	}
+}
+
+.header-text{
+	position: relative;
+	z-index: 9;
+	text-align: center;
+	h2{
+		font-size: 26px;
+		font-weight: 900;
+	}
+	p{
+		margin-top: 20px;
+		font-size: 16px;
+	}
+}
+
+
+//====================================================================================================
+
+/*
+	.header-menu__icon{
+		display: block;
+		position: absolute;
+		top: 18px;
+		right: 10px;
+		width:30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
+			&:first-child{top: 0px;}
+			&:last-child{top: auto;bottom: 0px;}
+		}
+		&.active{
+			span{@include scale(0);
+				&:first-child{@include rotate(-45deg);top: 8px;}
+				&:last-child{@include rotate(45deg);bottom: 8px;}
+			}
+		}
+	}
+*/
